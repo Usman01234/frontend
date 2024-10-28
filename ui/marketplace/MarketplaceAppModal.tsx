@@ -149,7 +149,7 @@ const MarketplaceAppModal = ({
             <Image
               src={ logoUrl }
               alt={ `${ title } app icon` }
-              borderRadius="md"
+              borderRadius="0"
             />
           </Flex>
 
@@ -234,7 +234,7 @@ const MarketplaceAppModal = ({
                   color={ iconColor }
                   _hover={{ color: iconColor }}
                   display="inline-flex"
-                  borderRadius="base"
+                  borderRadius="0"
                 />
               </Flex>
             </Flex>

@@ -34,7 +34,7 @@ const BackLink = (props: BackLinkProp & { isLoading?: boolean }) => {
         boxSize={ 6 }
         display="inline-block"
         flexShrink={ 0 }
-        borderRadius="base"
+        borderRadius="0"
         mr={ 3 }
         my={ 2 }
         verticalAlign="text-bottom"

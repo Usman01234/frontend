@@ -37,7 +37,7 @@ const BlockEpochElectionRewardDetailsMobile = ({ type, token }: Props) => {
   });
 
   return (
-    <Flex flexDir="column" rowGap={ 3 } p={ 4 } bgColor={ bgColor } borderRadius="base" maxH="360px" overflowY="scroll">
+    <Flex flexDir="column" rowGap={ 3 } p={ 4 } bgColor={ bgColor } borderRadius="0" maxH="360px" overflowY="scroll">
 
       { query.data?.pages
         .map((page) => page.items)

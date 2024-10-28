@@ -27,7 +27,7 @@ const PROP_TO_TAB = {
 
 const AddressCounterItem = ({ prop, query, address, onClick, isAddressQueryLoading, isDegradedData }: Props) => {
   if (query.isPlaceholderData || isAddressQueryLoading) {
-    return <Skeleton h={ 5 } w="80px" borderRadius="full"/>;
+    return <Skeleton h={ 5 } w="80px" borderRadius="0"/>;
   }
 
   const data = query.data?.[prop];

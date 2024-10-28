@@ -17,22 +17,22 @@ const AppErrorTxNotFound = () => {
 
   return (
     <>
-      <Box p={ 4 } borderColor={ snippet.borderColor } borderRadius="md" w="230px" borderWidth="1px">
+      <Box p={ 4 } borderColor={ snippet.borderColor } borderRadius="0" w="230px" borderWidth="1px">
         <Flex alignItems="center" pb={ 4 } borderBottomWidth="1px" borderColor={ snippet.borderColor }>
-          <IconSvg name="transactions" boxSize={ 8 } color={ snippet.iconColor } bgColor={ snippet.iconBg } p={ 1 } borderRadius="md"/>
+          <IconSvg name="transactions" boxSize={ 8 } color={ snippet.iconColor } bgColor={ snippet.iconBg } p={ 1 } borderRadius="0"/>
           <Box ml={ 2 }>
-            <Box w="125px" h="8px" borderRadius="full" bgColor={ snippet.iconBg }/>
-            <Box w="30px" h="8px" borderRadius="full" bgColor={ snippet.borderColor } mt={ 1.5 }/>
+            <Box w="125px" h="8px" borderRadius="0" bgColor={ snippet.iconBg }/>
+            <Box w="30px" h="8px" borderRadius="0" bgColor={ snippet.borderColor } mt={ 1.5 }/>
           </Box>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center" mt={ 3 }>
           <Flex alignItems="center">
-            <Box boxSize={ 5 } borderRadius="full" bgColor={ snippet.borderColor }/>
-            <Box w="65px" h="8px" borderRadius="full" bgColor={ snippet.borderColor } ml={ 1.5 }/>
+            <Box boxSize={ 5 } borderRadius="0" bgColor={ snippet.borderColor }/>
+            <Box w="65px" h="8px" borderRadius="0" bgColor={ snippet.borderColor } ml={ 1.5 }/>
           </Flex>
           <Flex alignItems="center">
-            <Box boxSize={ 5 } borderRadius="full" bgColor={ snippet.borderColor }/>
-            <Box w="65px" h="8px" borderRadius="full" bgColor={ snippet.borderColor } ml={ 1.5 }/>
+            <Box boxSize={ 5 } borderRadius="0" bgColor={ snippet.borderColor }/>
+            <Box w="65px" h="8px" borderRadius="0" bgColor={ snippet.borderColor } ml={ 1.5 }/>
           </Flex>
         </Flex>
       </Box>

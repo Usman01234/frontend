@@ -14,7 +14,7 @@ const PopoverTriggerTooltip = ({ label, isLoading, className, children }: Props,
   const isMobile = useIsMobile();
   return (
     // tooltip need to be wrapped in div for proper popover positioning
-    <Skeleton isLoaded={ !isLoading } borderRadius="base" ref={ ref } className={ className }>
+    <Skeleton isLoaded={ !isLoading } borderRadius="0" ref={ ref } className={ className }>
       <Tooltip
         label={ label }
         isDisabled={ isMobile }

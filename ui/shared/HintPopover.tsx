@@ -32,7 +32,7 @@ const HintPopover = ({ label, isLoading, className, popoverProps, popoverContent
   const bgColor = useColorModeValue('gray.700', 'gray.900');
 
   if (isLoading) {
-    return <Skeleton className={ className } boxSize={ 5 } borderRadius="sm"/>;
+    return <Skeleton className={ className } boxSize={ 5 } borderRadius="0"/>;
   }
 
   return (
@@ -41,7 +41,7 @@ const HintPopover = ({ label, isLoading, className, popoverProps, popoverContent
         <IconSvg className={ className } name="info" boxSize={ 5 } color="icon_info" _hover={{ color: 'link_hovered' }} cursor="pointer"/>
       </PopoverTrigger>
       <Portal>
-        <PopoverContent bgColor={ bgColor } maxW={{ base: 'calc(100vw - 8px)', lg: '320px' }} borderRadius="sm" { ...popoverContentProps }>
+        <PopoverContent bgColor={ bgColor } maxW={{ base: 'calc(100vw - 8px)', lg: '320px' }} borderRadius="0" { ...popoverContentProps }>
           <PopoverArrow bgColor={ bgColor }/>
           <PopoverBody color="white" fontSize="sm" lineHeight="20px" px={ 2 } py="2px" { ...popoverBodyProps }>
             <DarkMode>

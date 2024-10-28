@@ -15,7 +15,7 @@ const scrollbar = (props: StyleFunctionProps) => {
     },
     'body *::-webkit-scrollbar-thumb': {
       backgroundColor: bgColor,
-      borderRadius: '20px',
+      borderRadius: '0',
       border: `8px solid rgba(0,0,0,0)`,
       backgroundClip: 'content-box',
       minHeight: '32px',

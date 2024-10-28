@@ -118,7 +118,7 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
     boxSize: '20px',
     p: '1px',
     cursor: 'pointer',
-    borderRadius: '3px',
+    borderRadius: '0',
     borderWidth: '1px',
     borderColor: 'transparent',
   };

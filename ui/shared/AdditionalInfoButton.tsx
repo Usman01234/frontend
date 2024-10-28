@@ -20,7 +20,7 @@ const AdditionalInfoButton = ({ isOpen, onClick, className, isLoading }: Props, 
   const infoBgColor = useColorModeValue('blue.50', 'gray.600');
 
   if (isLoading) {
-    return <Skeleton boxSize={ 6 } borderRadius="sm" flexShrink={ 0 }/>;
+    return <Skeleton boxSize={ 6 } borderRadius="0" flexShrink={ 0 }/>;
   }
 
   return (
@@ -31,7 +31,7 @@ const AdditionalInfoButton = ({ isOpen, onClick, className, isLoading }: Props, 
       className={ className }
       ref={ ref }
       background={ isOpen ? infoBgColor : 'unset' }
-      borderRadius="8px"
+      borderRadius="0"
       w="24px"
       h="24px"
       onClick={ onClick }

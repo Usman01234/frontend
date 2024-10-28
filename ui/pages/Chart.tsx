@@ -214,7 +214,7 @@ const Chart = () => {
                 variant="outline"
                 colorScheme="blue"
                 display="flex"
-                borderRadius="8px"
+                borderRadius="0"
                 width={ 8 }
                 height={ 8 }
               />

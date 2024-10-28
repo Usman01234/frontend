@@ -65,7 +65,7 @@ const SwaggerUI = () => {
     '.swagger-ui .btn.try-out__btn': {
       borderColor: useToken('colors', 'link'),
       color: useToken('colors', 'link'),
-      borderRadius: 'sm',
+      borderRadius: '0',
     },
     '.swagger-ui .btn.try-out__btn:hover': {
       boxShadow: 'none',
@@ -103,7 +103,7 @@ const SwaggerUI = () => {
     },
     '.swagger-ui .model-toggle': {
       bgColor: useColorModeValue('transparent', 'whiteAlpha.700'),
-      borderRadius: 'sm',
+      borderRadius: '0',
     },
     '.swagger-ui .model .property.primitive': {
       color: useToken('colors', 'text_secondary'),

@@ -29,12 +29,12 @@ const AddressAccountHistoryTableItem = (props: Props) => {
           timestamp={ props.tx.rawTransactionData.timestamp * 1000 }
           isLoading={ props.isPlaceholderData }
           color="text_secondary"
-          borderRadius="sm"
+          borderRadius="0"
           flexShrink={ 0 }
         />
       </Td>
       <Td px={ 3 } py="18px" fontSize="sm" >
-        <Skeleton borderRadius="sm" isLoaded={ !props.isPlaceholderData }>
+        <Skeleton borderRadius="0" isLoaded={ !props.isPlaceholderData }>
           <Box display="flex">
             <IconSvg
               name="lightning"

@@ -9,7 +9,7 @@ export default function getOutlinedFieldStyles(props: StyleFunctionProps) {
   const transitionProps = getDefaultTransitionProps();
 
   return {
-    border: '2px solid',
+    border: '1px solid',
     // filled input
     ...formStyles.input.filled,
     ...transitionProps,

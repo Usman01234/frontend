@@ -21,7 +21,7 @@ const RawInputData = ({ hex, rightSlot: rightSlotProp }: Props) => {
 
   const rightSlot = (
     <>
-      <Select size="xs" borderRadius="base" value={ selectedDataType } onChange={ handleSelectChange } w="auto" mr="auto">
+      <Select size="xs" borderRadius="0" value={ selectedDataType } onChange={ handleSelectChange } w="auto" mr="auto">
         { OPTIONS.map((option) => <option key={ option } value={ option }>{ option }</option>) }
       </Select>
       { rightSlotProp }

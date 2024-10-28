@@ -105,7 +105,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
         <Skeleton ml={ 5 } isLoaded={ !isLoading }>
           <Select
             size="xs"
-            borderRadius="base"
+            borderRadius="0"
             value={ format }
             onChange={ handleSelectChange }
             w="auto"

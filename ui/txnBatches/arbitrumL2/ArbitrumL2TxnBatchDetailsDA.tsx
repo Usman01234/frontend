@@ -60,7 +60,7 @@ const ArbitrumL2TxnBatchDetailsDA = ({ dataAvailability }: Props) => {
             gap={ 5 }
             backgroundColor={ signersBg }
             padding={ 4 }
-            borderRadius="md"
+            borderRadius="0"
             minW="600px"
           >
             <Text fontWeight={ 600 }>Key</Text>
@@ -87,7 +87,7 @@ const ArbitrumL2TxnBatchDetailsDA = ({ dataAvailability }: Props) => {
         </Show>
 
         <Hide above="lg" ssr={ false }>
-          <Box backgroundColor={ signersBg } borderRadius="md">
+          <Box backgroundColor={ signersBg } borderRadius="0">
             { dataAvailability.signers.map(signer => (
               <VStack padding={ 4 } key={ signer.key } gap={ 2 }>
                 <Flex w="100%" justifyContent="space-between">

@@ -38,7 +38,7 @@ const NovesActionSnippet: FC<Props> = ({ item, isLoaded }) => {
   const validTokenAddress = token.address ? HEX_REGEXP.test(token.address) : false;
 
   return (
-    <Skeleton borderRadius="sm" isLoaded={ isLoaded }>
+    <Skeleton borderRadius="0" isLoaded={ isLoaded }>
       <Hide above="lg">
         <Box display="flex" gap={ 2 } cursor="pointer" flexWrap="wrap">
           <Text fontWeight="700" >

@@ -88,7 +88,7 @@ const TxDetailsAction = ({ action }: Props) => {
           <chakra.span color="text_secondary">{ text1 }</chakra.span>
 
           <Flex columnGap={ 2 }>
-            <IconSvg name="uniswap" boxSize={ 5 } color="white" bgColor="#ff007a" borderRadius="full" p="2px"/>
+            <IconSvg name="uniswap" boxSize={ 5 } color="white" bgColor="#ff007a" borderRadius="0" p="2px"/>
             <chakra.span>Uniswap V3</chakra.span>
           </Flex>
         </Flex>

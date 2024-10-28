@@ -38,7 +38,7 @@ const FeaturedAppMobile = ({
 
   return (
     <LinkBox
-      borderRadius="md"
+      borderRadius="0"
       padding={{ base: 3, sm: '20px' }}
       role="group"
       background={ useColorModeValue('purple.50', 'whiteAlpha.100') }
@@ -66,7 +66,7 @@ const FeaturedAppMobile = ({
             <Image
               src={ isLoading ? undefined : logoUrl }
               alt={ `${ title } app icon` }
-              borderRadius="8px"
+              borderRadius="0"
             />
           </Skeleton>
 

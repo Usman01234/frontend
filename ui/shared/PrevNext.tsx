@@ -25,8 +25,8 @@ const PrevNext = ({ className, onClick, prevLabel, nextLabel, isPrevDisabled, is
   if (isLoading) {
     return (
       <Flex columnGap="10px" className={ className }>
-        <Skeleton boxSize={ 6 } borderRadius="sm"/>
-        <Skeleton boxSize={ 6 } borderRadius="sm"/>
+        <Skeleton boxSize={ 6 } borderRadius="0"/>
+        <Skeleton boxSize={ 6 } borderRadius="0"/>
       </Flex>
     );
   }
@@ -38,7 +38,7 @@ const PrevNext = ({ className, onClick, prevLabel, nextLabel, isPrevDisabled, is
           aria-label="prev"
           icon={ <IconSvg name="arrows/east-mini" boxSize={ 6 }/> }
           h={ 6 }
-          borderRadius="sm"
+          borderRadius="0"
           variant="subtle"
           colorScheme="gray"
           onClick={ handelPrevClick }
@@ -50,7 +50,7 @@ const PrevNext = ({ className, onClick, prevLabel, nextLabel, isPrevDisabled, is
           aria-label="next"
           icon={ <IconSvg name="arrows/east-mini" boxSize={ 6 } transform="rotate(180deg)"/> }
           h={ 6 }
-          borderRadius="sm"
+          borderRadius="0"
           variant="subtle"
           colorScheme="gray"
           ml="10px"

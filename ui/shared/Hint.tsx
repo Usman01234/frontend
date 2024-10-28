@@ -21,7 +21,7 @@ const Hint = ({ label, className, tooltipProps, isLoading }: Props) => {
   }, [ onToggle ]);
 
   if (isLoading) {
-    return <Skeleton className={ className } boxSize={ 5 } borderRadius="sm"/>;
+    return <Skeleton className={ className } boxSize={ 5 } borderRadius="0"/>;
   }
 
   return (

@@ -23,11 +23,11 @@ const SolidityscanReportScore = ({ className, score }: Props) => {
         w={ 12 }
         h={ 12 }
         bgGradient={ `conic-gradient(${ scoreColor } 0, ${ scoreColor } ${ score }%, ${ chartGrayColor } 0, ${ chartGrayColor } 100%)` }
-        borderRadius="24px"
+        borderRadius="0"
         position="relative"
         mr={ 3 }
       >
-        <Center position="absolute" w="38px" h="38px" top="5px" right="5px" bg={ popoverBgColor } borderRadius="20px">
+        <Center position="absolute" w="38px" h="38px" top="5px" right="5px" bg={ popoverBgColor } borderRadius="0">
           <IconSvg name={ score < 80 ? 'score/score-not-ok' : 'score/score-ok' } boxSize={ 5 } color={ scoreColor }/>
         </Center>
       </Box>

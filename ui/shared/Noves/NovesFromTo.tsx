@@ -34,7 +34,7 @@ const NovesFromTo: FC<Props> = ({ isLoaded, txData, currentAddress = '', item })
   const address = { hash: data.address || '', name: data.name || '' };
 
   return (
-    <Skeleton borderRadius="sm" isLoaded={ isLoaded }>
+    <Skeleton borderRadius="0" isLoaded={ isLoaded }>
       <Box display="flex">
         <Tag
           colorScheme={ isSent ? 'yellow' : 'green' }

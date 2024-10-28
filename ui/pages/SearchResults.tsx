@@ -181,7 +181,7 @@ const SearchResultsPageContent = () => {
     const resultsCount = pagination.page === 1 && !data?.next_page_params ? displayedItems.length : '50+';
 
     const text = isLoading && pagination.page === 1 ? (
-      <Skeleton h={ 6 } w="280px" borderRadius="full" mb={ pagination.isVisible ? 0 : 6 }/>
+      <Skeleton h={ 6 } w="280px" borderRadius="0" mb={ pagination.isVisible ? 0 : 6 }/>
     ) : (
       (
         <>

@@ -41,7 +41,7 @@ const BlockCountdownTimer = ({ value: initialValue, onFinish }: Props) => {
       bgColor={ bgColor }
       mt={{ base: 6, lg: 8 }}
       p={{ base: 3, lg: 4 }}
-      borderRadius="base"
+      borderRadius="0"
       divider={ <StackDivider borderColor="divider"/> }
     >
       <BlockCountdownTimerItem label="Days" value={ periods.days }/>

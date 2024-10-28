@@ -25,7 +25,7 @@ const NetworkMenuPopup = ({ items, tabs }: Props) => {
   const content = !items || items.length === 0 ? (
     <>
       <Flex alignItems="center">
-        <Flex h="32px" w="105px" bgColor={ bgColor } borderRadius="base" px={ 4 } py={ 2 }>
+        <Flex h="32px" w="105px" bgColor={ bgColor } borderRadius="0" px={ 4 } py={ 2 }>
           <Skeleton h="16px" w="100%"/>
         </Flex>
         <Skeleton h="16px" w="68px" mx={ 4 }/>
@@ -33,15 +33,15 @@ const NetworkMenuPopup = ({ items, tabs }: Props) => {
       </Flex>
       <Flex mt={ 3 } flexDir="column" rowGap={ 2 }>
         <Flex mx={ 3 } my={ 2 } alignItems="center">
-          <Skeleton h="30px" w="30px" borderRadius="full"/>
+          <Skeleton h="30px" w="30px" borderRadius="0"/>
           <Skeleton h="16px" w="120px" ml={ 3 }/>
         </Flex>
         <Flex mx={ 3 } my={ 2 } alignItems="center">
-          <Skeleton h="30px" w="30px" borderRadius="full"/>
+          <Skeleton h="30px" w="30px" borderRadius="0"/>
           <Skeleton h="16px" w="180px" ml={ 3 }/>
         </Flex>
         <Flex mx={ 3 } my={ 2 } alignItems="center">
-          <Skeleton h="30px" w="30px" borderRadius="full"/>
+          <Skeleton h="30px" w="30px" borderRadius="0"/>
           <Skeleton h="16px" w="150px" ml={ 3 }/>
         </Flex>
       </Flex>

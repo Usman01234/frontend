@@ -27,7 +27,7 @@ const LogoFallback = ({ isCollapsed, isSmall }: { isCollapsed?: boolean; isSmall
   };
 
   if (config.UI.navigation[field].default) {
-    return <Skeleton w="100%" borderRadius="sm" display={ display }/>;
+    return <Skeleton w="100%" borderRadius="0" display={ display }/>;
   }
 
   return (
@@ -48,7 +48,7 @@ const NetworkLogo = ({ isCollapsed, onClick, className }: Props) => {
   const darkModeFilter = { filter: 'brightness(0) invert(1)' };
   const logoStyle = useColorModeValue({}, !config.UI.navigation.logo.dark ? darkModeFilter : {});
   const iconStyle = useColorModeValue({}, !config.UI.navigation.icon.dark ? darkModeFilter : {});
-
+  const logolink = useColorModeValue('/logodark.svg', '/logo.svg');
   return (
     <Box
       className={ className }
@@ -63,24 +63,25 @@ const NetworkLogo = ({ isCollapsed, onClick, className }: Props) => {
       aria-label="Link to main page"
     >
       { /* big logo */ }
+
       <Image
         w="auto"
         h="100%"
-        src={ logoSrc }
+        src={ logolink }
         alt={ `${ config.chain.name } network logo` }
-        fallback={ <LogoFallback isCollapsed={ isCollapsed }/> }
+        // fallback={ <LogoFallback isCollapsed={ isCollapsed }/> }
         display={{ base: 'block', lg: isCollapsed === false ? 'block' : 'none', xl: isCollapsed ? 'none' : 'block' }}
-        style={ logoStyle }
+        // style={ logoStyle }
       />
       { /* small logo */ }
       <Image
         w="auto"
         h="100%"
-        src={ iconSrc }
+        src="/icon.svg"
         alt={ `${ config.chain.name } network logo` }
-        fallback={ <LogoFallback isCollapsed={ isCollapsed } isSmall/> }
+        // fallback={ <LogoFallback isCollapsed={ isCollapsed } isSmall/> }
         display={{ base: 'none', lg: isCollapsed === false ? 'none' : 'block', xl: isCollapsed ? 'block' : 'none' }}
-        style={ iconStyle }
+        // style={ iconStyle }
       />
     </Box>
   );

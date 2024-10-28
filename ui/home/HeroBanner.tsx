@@ -7,33 +7,28 @@ import ProfileMenuDesktop from 'ui/snippets/profileMenu/ProfileMenuDesktop';
 import SearchBar from 'ui/snippets/searchBar/SearchBar';
 import WalletMenuDesktop from 'ui/snippets/walletMenu/WalletMenuDesktop';
 
-const BACKGROUND_DEFAULT = 'radial-gradient(103.03% 103.03% at 0% 0%, rgba(183, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%), var(--chakra-colors-blue-400)';
+const BACKGROUND_DEFAULT =
+  'radial-gradient(103.03% 103.03% at 0% 0%, rgba(183, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%), var(--chakra-colors-blue-400)';
 const TEXT_COLOR_DEFAULT = 'white';
 const BORDER_DEFAULT = 'none';
 
 const HeroBanner = () => {
   const background = useColorModeValue(
-    // light mode
     config.UI.homepage.heroBanner?.background?.[0] ||
-    config.UI.homepage.plate.background ||
-    BACKGROUND_DEFAULT,
-    // dark mode
+      config.UI.homepage.plate.background ||
+      BACKGROUND_DEFAULT,
     config.UI.homepage.heroBanner?.background?.[1] ||
-    config.UI.homepage.heroBanner?.background?.[0] ||
-    config.UI.homepage.plate.background ||
-    BACKGROUND_DEFAULT,
+      config.UI.homepage.plate.background ||
+      BACKGROUND_DEFAULT,
   );
 
   const textColor = useColorModeValue(
-    // light mode
     config.UI.homepage.heroBanner?.text_color?.[0] ||
-    config.UI.homepage.plate.textColor ||
-    TEXT_COLOR_DEFAULT,
-    // dark mode
+      config.UI.homepage.plate.textColor ||
+      TEXT_COLOR_DEFAULT,
     config.UI.homepage.heroBanner?.text_color?.[1] ||
-    config.UI.homepage.heroBanner?.text_color?.[0] ||
-    config.UI.homepage.plate.textColor ||
-    TEXT_COLOR_DEFAULT,
+      config.UI.homepage.plate.textColor ||
+      TEXT_COLOR_DEFAULT,
   );
 
   const border = useColorModeValue(
@@ -44,15 +39,37 @@ const HeroBanner = () => {
   return (
     <Flex
       w="100%"
-      background={ background }
+      background="transparent"
       border={ border }
-      borderRadius="md"
+      borderRadius="0px"
       p={{ base: 4, lg: 8 }}
       columnGap={ 8 }
       alignItems="center"
+      position="relative"
+      overflow="hidden"
     >
-      <Box flexGrow={ 1 }>
-        <Flex mb={{ base: 2, lg: 3 }} justifyContent="space-between" alignItems="center" columnGap={ 2 }>
+      <img
+        src="/bg.png"
+        alt="img"
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: '0',
+          bottom: '0',
+          left: '0',
+          right: '0',
+        }}
+      />
+      <Box flexGrow={ 1 } style={{ zIndex: 9 }}>
+        <Flex
+          mb={{ base: 2, lg: 3 }}
+          justifyContent="space-between"
+          alignItems="center"
+          columnGap={ 2 }
+        >
           <Heading
             as="h1"
             fontSize={{ base: '18px', lg: '30px' }}
@@ -60,22 +77,32 @@ const HeroBanner = () => {
             fontWeight={{ base: 500, lg: 700 }}
             color={ textColor }
           >
-            {
-              config.meta.seo.enhancedDataEnabled ?
-                `${ config.chain.name } blockchain explorer` :
-                `${ config.chain.name } explorer`
-            }
+            { config.meta.seo.enhancedDataEnabled ?
+              `${ config.chain.name } blockchain explorer` :
+              `${ config.chain.name } explorer` }
           </Heading>
           { config.UI.navigation.layout === 'vertical' && (
             <Box display={{ base: 'none', lg: 'flex' }}>
-              { config.features.account.isEnabled && <ProfileMenuDesktop isHomePage/> }
-              { config.features.blockchainInteraction.isEnabled && <WalletMenuDesktop isHomePage/> }
+              { config.features.account.isEnabled && (
+                <ProfileMenuDesktop isHomePage/>
+              ) }
+              { config.features.blockchainInteraction.isEnabled && (
+                <WalletMenuDesktop isHomePage/>
+              ) }
             </Box>
           ) }
         </Flex>
         <SearchBar isHomepage/>
       </Box>
-      <AdBanner platform="mobile" w="fit-content" flexShrink={ 0 } borderRadius="md" overflow="hidden" display={{ base: 'none', lg: 'block ' }}/>
+      { /* <AdBanner
+        zIndex={9}
+        platform="mobile"
+        w="fit-content"
+        flexShrink={0}
+        borderRadius="0"
+        overflow="hidden"
+        display={ }
+      /> */ }
     </Flex>
   );
 };

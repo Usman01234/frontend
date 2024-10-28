@@ -16,8 +16,8 @@ const TableItemActionButtons = ({ onEditClick, onDeleteClick, isLoading }: Props
   if (isLoading) {
     return (
       <HStack spacing={ 6 } alignSelf="flex-end">
-        <Skeleton boxSize={ 5 } flexShrink={ 0 } borderRadius="sm"/>
-        <Skeleton boxSize={ 5 } flexShrink={ 0 } borderRadius="sm"/>
+        <Skeleton boxSize={ 5 } flexShrink={ 0 } borderRadius="0"/>
+        <Skeleton boxSize={ 5 } flexShrink={ 0 } borderRadius="0"/>
       </HStack>
     );
   }

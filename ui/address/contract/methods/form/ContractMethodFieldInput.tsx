@@ -69,7 +69,7 @@ const ContractMethodFieldInput = ({ data, hideLabel, path: name, className, isDi
       columnGap={ 3 }
       w="100%"
       bgColor={ isNativeCoin ? nativeCoinRowBgColor : undefined }
-      borderRadius="base"
+      borderRadius="0"
       px="6px"
       py={ isNativeCoin ? 1 : 0 }
     >

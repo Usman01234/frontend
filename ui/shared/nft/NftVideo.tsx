@@ -32,7 +32,7 @@ const NftVideo = ({ src, poster, autoPlay = true, onLoad, onError, onClick }: Pr
       src={ src }
       onCanPlayThrough={ onLoad }
       onError={ onError }
-      borderRadius="md"
+      borderRadius="0"
       onClick={ onClick }
       onMouseEnter={ handleMouseEnter }
       onMouseLeave={ handleMouseLeave }

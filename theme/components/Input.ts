@@ -19,7 +19,7 @@ const size = {
     px: '8px',
     py: '4px',
     h: '32px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
   sm: defineStyle({
     fontSize: 'md',
@@ -27,7 +27,7 @@ const size = {
     px: '8px',
     py: '12px',
     h: '40px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
   // TEMPORARY INPUT SIZE!!!
   // soon we will migrate to the new size and get rid off this one
@@ -41,7 +41,7 @@ const size = {
     px: '8px',
     py: '12px',
     h: '48px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
   md: defineStyle({
     fontSize: 'md',
@@ -49,7 +49,7 @@ const size = {
     px: '20px',
     py: '20px',
     h: '60px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
   lg: defineStyle({
     fontSize: 'md',
@@ -57,7 +57,7 @@ const size = {
     px: '24px',
     py: '28px',
     h: '80px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
 };
 

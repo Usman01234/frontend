@@ -18,24 +18,25 @@ const baseStylePopper = defineStyle({
 });
 
 const baseStyleContent = defineStyle((props) => {
-  const bg = mode('white', 'gray.900')(props);
+  const bg = mode('#000', '#fff')(props);
   const shadowColor = mode('blackAlpha.200', 'whiteAlpha.300')(props);
+  const borderColor = mode('#FFF', '#FFF')(props);
 
   return {
-    [$popperBg.variable]: `colors.${ bg }`,
+    [$popperBg.variable]: `#F7FAFC`,
     bg: $popperBg.reference,
     [$arrowBg.variable]: $popperBg.reference,
-    [$arrowShadowColor.variable]: `colors.${ shadowColor }`,
+    [$arrowShadowColor.variable]: `#F7FAFC`,
     _dark: {
-      [$popperBg.variable]: `colors.gray.900`,
-      [$arrowShadowColor.variable]: `colors.whiteAlpha.300`,
+      [$popperBg.variable]: `#141414`,
+      [$arrowShadowColor.variable]: `#141414`,
       boxShadow: 'dark-lg',
     },
     width: 'xs',
     border: 'none',
-    borderColor: 'inherit',
-    borderRadius: 'md',
-    boxShadow: '2xl',
+    borderColor: { borderColor },
+    borderRadius: '0',
+    boxShadow: 'none',
     zIndex: 'inherit',
     _focusVisible: {
       outline: 0,
@@ -63,7 +64,7 @@ const baseStyleFooter = defineStyle({
 
 const baseStyleCloseButton = defineStyle({
   position: 'absolute',
-  borderRadius: 'md',
+  borderRadius: '0',
   top: 1,
   insetEnd: 2,
   padding: 2,

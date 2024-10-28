@@ -29,7 +29,7 @@ const AddressCsvExportLink = ({ className, address, params, isLoading }: Props) 
   if (isInitialLoading) {
     return (
       <Flex className={ className } flexShrink={ 0 } alignItems="center">
-        <Skeleton boxSize={{ base: '32px', lg: 6 }} borderRadius="base"/>
+        <Skeleton boxSize={{ base: '32px', lg: 6 }} borderRadius="0"/>
         <Hide ssr={ false } below="lg">
           <Skeleton w="112px" h={ 6 } ml={ 1 }/>
         </Hide>

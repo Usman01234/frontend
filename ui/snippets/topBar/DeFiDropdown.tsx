@@ -30,7 +30,7 @@ const DeFiDropdown = () => {
   const buttonStyles = {
     variant: 'solid',
     size: 'xs',
-    borderRadius: 'sm',
+    borderRadius: '0px',
     height: 5,
     px: 1.5,
     fontWeight: '500',
@@ -50,7 +50,7 @@ const DeFiDropdown = () => {
           { ...buttonStyles }
         >
           <chakra.span display={{ base: 'none', lg: 'inline' }} mr={ 1 }>
-            Blockscout
+          VION
           </chakra.span>
           DeFi
           <IconSvg name="arrows/east-mini" boxSize={ 4 } ml={ 1 } transform="rotate(-90deg)"/>

@@ -52,7 +52,7 @@ export default function TxAssetFlows(props: FlowViewProps) {
   const actionBar = (
     <ActionBar mt={ -6 } pb={{ base: 6, md: 5 }} flexDir={{ base: 'column', md: 'initial' }} gap={{ base: '2', md: 'initial' }} >
       <Box display="flex" alignItems="center" gap={ 1 }>
-        <Skeleton borderRadius="sm" isLoaded={ !isPlaceholderData } >
+        <Skeleton borderRadius="0" isLoaded={ !isPlaceholderData } >
           <Text fontWeight="400" mr={ 1 }>
               Wallet
           </Text>

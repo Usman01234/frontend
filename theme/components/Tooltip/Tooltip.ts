@@ -12,7 +12,7 @@ const variantNav = defineStyle((props) => {
     color: 'blue.400',
     padding: '15px 12px',
     minWidth: '120px',
-    borderRadius: 'base',
+    borderRadius: '0',
     fontSize: '14px',
     lineHeight: '20px',
     textAlign: 'center',

@@ -100,7 +100,7 @@ export const ContractSourceCode = ({ address, implementations }: Props) => {
       whiteSpace="nowrap"
       textOverflow="ellipsis"
       fontWeight={ 600 }
-      borderRadius="base"
+      borderRadius="0"
     >
       { options.map((option) => <option key={ option.address } value={ option.address }>{ option.label }</option>) }
     </Select>

@@ -44,7 +44,7 @@ const AddressFromToIcon = ({ isLoading, type, className }: Props) => {
       isLoading={ isLoading }
       boxSize={ 5 }
       flexShrink={ 0 }
-      borderRadius="sm"
+      borderRadius="0"
     />
   );
 

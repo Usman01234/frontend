@@ -37,7 +37,7 @@ const PublicTagsSubmitResultWithErrors = ({ data }: Props) => {
               <Grid
                 gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }}
                 bgColor={ item.error ? bgColorError : bgColorSuccess }
-                borderRadius="base"
+                borderRadius="0"
                 rowGap={ 3 }
               >
                 <GridItem px={{ base: 4, lg: 6 }} pt={{ base: 2, lg: 4 }} pb={{ base: 0, lg: 4 }} overflow="hidden">

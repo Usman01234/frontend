@@ -33,7 +33,7 @@ const LatestBlocksItem = ({ block, isLoading }: Props) => {
       exit={{ display: 'none' }}
       transitionDuration="normal"
       transitionTimingFunction="linear"
-      borderRadius="md"
+      borderRadius="0"
       border="1px solid"
       borderColor="divider"
       p={ 3 }

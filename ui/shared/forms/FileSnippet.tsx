@@ -57,7 +57,7 @@ const FileSnippet = ({ file, className, index, onRemove, isDisabled, error }: Pr
         color={ error ? 'error' : iconColor }
         mr={ 2 }
         borderWidth="2px"
-        borderRadius="md"
+        borderRadius="0"
         borderColor={ useColorModeValue('blackAlpha.100', 'whiteAlpha.200') }
         p={ 3 }
       />

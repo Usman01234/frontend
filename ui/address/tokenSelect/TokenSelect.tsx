@@ -43,8 +43,8 @@ const TokenSelect = ({ onClick }: Props) => {
   if (isPending) {
     return (
       <Flex columnGap={ 3 }>
-        <Skeleton h={ 8 } w="150px" borderRadius="base"/>
-        <Skeleton h={ 8 } w={ 9 } borderRadius="base"/>
+        <Skeleton h={ 8 } w="150px" borderRadius="0"/>
+        <Skeleton h={ 8 } w={ 9 } borderRadius="0"/>
       </Flex>
     );
   }

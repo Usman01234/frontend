@@ -24,7 +24,7 @@ const dailyTxsIndicator: TChainIndicator<'stats_charts_txs'> = {
   value: (stats) => stats.transactions_today === null ?
     'N/A' :
     Number(stats.transactions_today).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  icon: <IconSvg name="transactions" boxSize={ 6 } bgColor="#56ACD1" borderRadius="base" color="white"/>,
+  icon: <IconSvg name="transactions" boxSize={ 6 } bgColor="#56ACD1" borderRadius="0" color="white"/>,
   hint: `Number of transactions yesterday (0:00 - 23:59 UTC). The chart displays daily transactions for the past 30 days.`,
   api: {
     resourceName: 'stats_charts_txs',
@@ -92,7 +92,7 @@ const marketPriceIndicator: TChainIndicator<'stats_charts_market'> = {
   value: (stats) => stats.market_cap === null ?
     '$N/A' :
     '$' + Number(stats.market_cap).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  icon: <IconSvg name="globe" boxSize={ 6 } bgColor="#6A5DCC" borderRadius="base" color="white"/>,
+  icon: <IconSvg name="globe" boxSize={ 6 } bgColor="#6A5DCC" borderRadius="0" color="white"/>,
   // eslint-disable-next-line max-len
   hint: 'The total market value of a cryptocurrency\'s circulating supply. It is analogous to the free-float capitalization in the stock market. Market Cap = Current Price x Circulating Supply.',
   api: {
@@ -129,7 +129,7 @@ const tvlIndicator: TChainIndicator<'stats_charts_market'> = {
   value: (stats) => stats.tvl === null ?
     '$N/A' :
     '$' + Number(stats.tvl).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  icon: <IconSvg name="lock" boxSize={ 6 } bgColor="#517FDB" borderRadius="base" color="white"/>,
+  icon: <IconSvg name="lock" boxSize={ 6 } bgColor="#517FDB" borderRadius="0" color="white"/>,
   // eslint-disable-next-line max-len
   hint: 'Total value of digital assets locked or staked in a chain',
   api: {

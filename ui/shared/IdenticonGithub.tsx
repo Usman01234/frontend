@@ -27,7 +27,7 @@ const IdenticonGithub = ({ size, seed }: Props) => {
       boxSize={ `${ size * 2 }px` }
       transformOrigin="left top"
       transform="scale(0.5)"
-      borderRadius="full"
+      borderRadius="0"
       overflow="hidden"
     >
       <Identicon

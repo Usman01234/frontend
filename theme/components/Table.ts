@@ -71,10 +71,10 @@ const baseStyle = definePartsStyle({
     color: 'gray.500',
     letterSpacing: 'none',
     _first: {
-      borderTopLeftRadius: '8px',
+      borderTopLeftRadius: '0px',
     },
     _last: {
-      borderTopRightRadius: '8px',
+      borderTopRightRadius: '0px',
     },
   },
   td: {
@@ -83,8 +83,8 @@ const baseStyle = definePartsStyle({
   },
   table: {
     tableLayout: 'fixed',
-    borderTopLeftRadius: 'base',
-    borderTopRightRadius: 'base',
+    borderTopLeftRadius: '0',
+    borderTopRightRadius: '0',
     overflow: 'unset',
     fontVariant: 'normal',
     fontVariantLigatures: 'no-contextual',

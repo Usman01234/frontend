@@ -71,7 +71,7 @@ type Props = IconProps;
 
 const AddressIdenticon = ({ size, hash }: Props) => {
   return (
-    <Box boxSize={ `${ size }px` } borderRadius="full" overflow="hidden">
+    <Box boxSize={ `${ size }px` } borderRadius="0" overflow="hidden">
       <Icon size={ size } hash={ hash }/>
     </Box>
   );

@@ -27,7 +27,7 @@ const WalletIdenticon = ({ address, isAutoConnectDisabled, className }: Props) =
           bottom={ isMobile ? '-3px' : '-1px' }
           right={ isMobile ? '-4px' : '-5px' }
           backgroundColor="rgba(16, 17, 18, 0.80)"
-          borderRadius="full"
+          borderRadius="0"
           border="1px solid"
           borderColor={ borderColor }
         >

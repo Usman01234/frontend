@@ -61,16 +61,16 @@ const LogTopic = ({ hex, index, isLoading }: Props) => {
 
   return (
     <Flex alignItems="center" px={{ base: 0, lg: 3 }} _notFirst={{ mt: 3 }} overflow="hidden" maxW="100%">
-      <Skeleton isLoaded={ !isLoading } mr={ 3 } borderRadius="base">
+      <Skeleton isLoaded={ !isLoading } mr={ 3 } borderRadius="0">
         <Button variant="outline" colorScheme="gray" data-selected size="xs" fontWeight={ 400 } w={ 6 }>
           { index }
         </Button>
       </Skeleton>
       { index !== 0 && (
-        <Skeleton isLoaded={ !isLoading } mr={ 3 } flexShrink={ 0 } borderRadius="base">
+        <Skeleton isLoaded={ !isLoading } mr={ 3 } flexShrink={ 0 } borderRadius="0">
           <Select
             size="xs"
-            borderRadius="base"
+            borderRadius="0"
             value={ selectedDataType }
             onChange={ handleSelectChange }
             w="auto"

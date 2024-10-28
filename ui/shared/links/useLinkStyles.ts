@@ -13,7 +13,7 @@ export function useLinkStyles(commonProps: ChakraProps, variant?: Variants) {
         px: '10px',
         py: '6px',
         bgColor: subtleLinkBg,
-        borderRadius: 'base',
+        borderRadius: '0',
       };
     }
 

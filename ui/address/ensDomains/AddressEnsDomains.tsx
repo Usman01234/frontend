@@ -57,7 +57,7 @@ const AddressEnsDomains = ({ query, addressHash, mainDomainName }: Props) => {
   }
 
   if (isPending) {
-    return <Skeleton h={ 8 } w={{ base: '50px', xl: '120px' }} borderRadius="base"/>;
+    return <Skeleton h={ 8 } w={{ base: '50px', xl: '120px' }} borderRadius="0"/>;
   }
 
   if (data.items.length === 0) {

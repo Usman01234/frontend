@@ -15,7 +15,7 @@ type Props = {
 
 const ChartResolutionSelect = ({ resolution, resolutions, onResolutionChange, isLoading }: Props) => {
   return (
-    <Skeleton borderRadius="base" isLoaded={ !isLoading } w={{ base: 'auto', lg: '160px' }}>
+    <Skeleton borderRadius="0" isLoaded={ !isLoading } w={{ base: 'auto', lg: '160px' }}>
       <StatsDropdownMenu
         items={ STATS_RESOLUTIONS.filter(r => resolutions.includes(r.id)) }
         selectedId={ resolution }

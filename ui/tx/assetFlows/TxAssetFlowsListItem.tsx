@@ -17,7 +17,7 @@ const TxAssetFlowsListItem = (props: Props) => {
 
   return (
     <ListItemMobile rowGap={ 4 } w="full" >
-      <Skeleton borderRadius="sm" isLoaded={ !props.isPlaceholderData } w="full">
+      <Skeleton borderRadius="0" isLoaded={ !props.isPlaceholderData } w="full">
 
         <Box display="flex" >
           <IconSvg

@@ -61,6 +61,7 @@ const NavigationDesktop = () => {
       flexDirection="column"
       alignItems="stretch"
       borderRight="1px solid"
+      borderLeft="1px solid"
       borderColor="divider"
       px={{ lg: isExpanded ? 6 : 4, xl: isCollapsed ? 4 : 6 }}
       py={ 12 }
@@ -110,7 +111,7 @@ const NavigationDesktop = () => {
         height={ 6 }
         border="1px"
         _hover={{ color: 'link_hovered' }}
-        borderRadius="base"
+        borderRadius="0"
         { ...chevronIconStyles }
         transform={{ lg: isExpanded ? 'rotate(0)' : 'rotate(180deg)', xl: isCollapsed ? 'rotate(180deg)' : 'rotate(0)' }}
         { ...getDefaultTransitionProps({ transitionProperty: 'transform, left' }) }

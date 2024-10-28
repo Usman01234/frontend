@@ -39,7 +39,7 @@ const AddressEntityContentProxy = (props: ContentProps) => {
       </PopoverTrigger>
       <Portal>
         <DarkMode>
-          <PopoverContent bgColor={ bgColor } w="fit-content" borderRadius="sm" maxW={{ base: '100vw', lg: '410px' }} onClick={ handleClick }>
+          <PopoverContent bgColor={ bgColor } w="fit-content" borderRadius="0" maxW={{ base: '100vw', lg: '410px' }} onClick={ handleClick }>
             <PopoverArrow bgColor={ bgColor }/>
             <PopoverBody color="white" p={ 2 } fontSize="sm" lineHeight={ 5 } textAlign="center">
               <Box fontWeight={ 600 }>

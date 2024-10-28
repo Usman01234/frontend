@@ -26,9 +26,9 @@ const TokenVerifiedInfo = ({ verifiedInfoQuery }: Props) => {
     if (isPending) {
       return (
         <>
-          <Skeleton w="100px" h="30px" borderRadius="base"/>
-          <Skeleton w="100px" h="30px" borderRadius="base"/>
-          <Skeleton w="70px" h="30px" borderRadius="base"/>
+          <Skeleton w="100px" h="30px" borderRadius="0"/>
+          <Skeleton w="100px" h="30px" borderRadius="0"/>
+          <Skeleton w="70px" h="30px" borderRadius="0"/>
         </>
       );
     }

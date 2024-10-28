@@ -7,9 +7,9 @@ import config from 'configs/app';
 const variantSolid = defineStyle((props) => {
   const { colorScheme: c } = props;
 
-  const bg = `${ c }.600`;
-  const color = 'white';
-  const hoverBg = `${ c }.400`;
+  const bg = `#2DD98F`;
+  const color = '#00110A';
+  const hoverBg = `#2DD98F`;
   const activeBg = hoverBg;
 
   return {
@@ -28,6 +28,7 @@ const variantSolid = defineStyle((props) => {
     // It is simply should be the same as the "hover" state
     _active: { bg: activeBg },
     fontWeight: 600,
+    borderRadius: '0',
   };
 });
 
@@ -50,6 +51,7 @@ const variantOutline = defineStyle((props) => {
     borderWidth: props.borderWidth || '2px',
     borderStyle: 'solid',
     borderColor,
+    borderRadius: '0',
     bg,
     _hover: {
       color: 'link_hovered',
@@ -111,6 +113,7 @@ const variantGhost = defineStyle((props) => {
 
   return {
     bg: 'transparent',
+    borderRadius: '0',
     color: mode(`${ c }.700`, 'gray.400')(props),
     _active: {
       color: mode(`${ c }.700`, 'gray.50')(props),
@@ -145,6 +148,7 @@ const variantSubtle = defineStyle((props) => {
 
   return {
     bg: `${ c }.100`,
+    borderRadius: '0',
     color: `${ c }.600`,
     _hover: {
       color: 'link_hovered',
@@ -192,6 +196,7 @@ const variantHeader = defineStyle((props) => {
 
   return {
     bgColor: 'transparent',
+    borderRadius: '0',
     color: mode('blackAlpha.800', 'gray.400')(props),
     borderColor: mode('gray.300', 'gray.600')(props),
     borderWidth: props.borderWidth || '2px',
@@ -202,12 +207,14 @@ const variantHeader = defineStyle((props) => {
     },
     '&[data-selected=true]': {
       bgColor: mode('blackAlpha.50', 'whiteAlpha.100')(props),
+      borderRadius: '0',
       color: mode('blackAlpha.800', 'whiteAlpha.800')(props),
       borderColor: 'transparent',
       borderWidth: props.borderWidth || '0px',
     },
     '&[data-selected=true][data-warning=true]': {
       bgColor: mode('orange.100', 'orange.900')(props),
+      borderRadius: '0',
       color: mode('blackAlpha.800', 'whiteAlpha.800')(props),
       borderColor: 'transparent',
       borderWidth: props.borderWidth || '0px',
@@ -227,7 +234,7 @@ const variants = {
 
 const baseStyle = defineStyle({
   fontWeight: 600,
-  borderRadius: 'base',
+  borderRadius: '0',
   overflow: 'hidden',
   _focusVisible: {
     boxShadow: { base: 'none', lg: 'outline' },

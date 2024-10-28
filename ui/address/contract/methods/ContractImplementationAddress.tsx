@@ -46,7 +46,7 @@ const ContractImplementationAddress = ({ selectedItem, onItemSelect, implementat
         onChange={ onItemSelect }
         w="auto"
         fontWeight={ 600 }
-        borderRadius="base"
+        borderRadius="0"
       >
         { implementations.map((implementation) => (
           <option key={ implementation.address } value={ implementation.address }>

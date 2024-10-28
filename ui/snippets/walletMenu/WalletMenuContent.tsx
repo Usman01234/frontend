@@ -33,7 +33,7 @@ const WalletMenuContent = ({ address, ensDomainName, disconnect, isAutoConnectDi
     <Box>
       { isAutoConnectDisabled && (
         <Flex
-          borderRadius="base"
+          borderRadius="0"
           p={ 3 }
           mb={ 3 }
           alignItems="center"

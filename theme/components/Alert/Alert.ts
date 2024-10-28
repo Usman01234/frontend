@@ -21,7 +21,7 @@ function getBg(props: StyleFunctionProps) {
 const baseStyle = definePartsStyle({
   container: {
     bg: $bg.reference,
-    borderRadius: 'md',
+    borderRadius: '0',
     px: 6,
     py: 3,
   },

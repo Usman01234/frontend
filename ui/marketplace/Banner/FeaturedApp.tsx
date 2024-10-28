@@ -60,7 +60,7 @@ const FeaturedApp = ({
     <LinkBox role="group">
       <Flex
         gap={ 6 }
-        borderRadius="md"
+        borderRadius="0"
         height="136px"
         padding={ 5 }
         background={ backgroundColor }
@@ -78,7 +78,7 @@ const FeaturedApp = ({
           <Image
             src={ isLoading ? undefined : logoUrl }
             alt={ `${ title } app icon` }
-            borderRadius="md"
+            borderRadius="0"
           />
         </Skeleton>
 

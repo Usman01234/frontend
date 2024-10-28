@@ -24,7 +24,7 @@ const variantFloating = defineStyle((props) => {
     top: '2px',
     zIndex: 2,
     position: 'absolute',
-    borderRadius: 'base',
+    borderRadius: '0',
     boxSizing: 'border-box',
     color: formStyles.placeholder.default.color,
     backgroundColor: props.bgColor || props.backgroundColor || 'transparent',

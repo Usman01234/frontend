@@ -81,7 +81,7 @@ const AddressAddToWallet = ({ className, token, isLoading, variant = 'icon', ico
   }
 
   if (isLoading) {
-    return <Skeleton className={ className } boxSize={ iconSize } borderRadius="base"/>;
+    return <Skeleton className={ className } boxSize={ iconSize } borderRadius="0"/>;
   }
 
   if (!feature.isEnabled) {

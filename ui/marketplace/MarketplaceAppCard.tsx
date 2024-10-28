@@ -81,7 +81,7 @@ const MarketplaceAppCard = ({
       _focusWithin={{
         boxShadow: isLoading ? 'none' : 'md',
       }}
-      borderRadius="md"
+      borderRadius="0"
       padding={{ base: 3, md: '20px' }}
       border="1px"
       borderColor={ useColorModeValue('gray.200', 'gray.600') }
@@ -109,7 +109,7 @@ const MarketplaceAppCard = ({
             <Image
               src={ isLoading ? undefined : logoUrl }
               alt={ `${ title } app icon` }
-              borderRadius="8px"
+              borderRadius="0"
             />
           </Skeleton>
 
@@ -213,7 +213,7 @@ const MarketplaceAppCard = ({
                 _hover={{ color: 'gray.400' }}
                 ml={{ base: 1, md: 0 }}
                 display="inline-flex"
-                borderRadius="base"
+                borderRadius="0"
               />
             </Flex>
           </Flex>

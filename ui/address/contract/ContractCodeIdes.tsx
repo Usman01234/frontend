@@ -45,7 +45,7 @@ const ContractCodeIde = ({ className, hash, isLoading }: Props) => {
   }, [ defaultIconColor, hash ]);
 
   if (isLoading) {
-    return <Skeleton h={ 8 } w="92px" borderRadius="base"/>;
+    return <Skeleton h={ 8 } w="92px" borderRadius="0"/>;
   }
 
   if (ideLinks.length === 0) {

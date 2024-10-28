@@ -48,7 +48,7 @@ const TokenInstanceMetadata = ({ data, isPlaceholderData }: Props) => {
       ) }
       <Flex alignItems="center" mb={ 6 }>
         <chakra.span fontWeight={ 500 }>Metadata</chakra.span>
-        <Select size="xs" borderRadius="base" value={ format } onChange={ handleSelectChange } w="auto" ml={ 5 }>
+        <Select size="xs" borderRadius="0" value={ format } onChange={ handleSelectChange } w="auto" ml={ 5 }>
           <option value="Table">Table</option>
           <option value="JSON">JSON</option>
         </Select>

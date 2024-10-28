@@ -18,7 +18,7 @@ const ContractMethodFieldAccordion = ({ label, level, children, onAddClick, onRe
   const bgColor = useColorModeValue('whiteAlpha.700', 'blackAlpha.700');
 
   return (
-    <Accordion allowToggle w="100%" bgColor={ level === 0 ? bgColorLevel0 : bgColor } borderRadius="base">
+    <Accordion allowToggle w="100%" bgColor={ level === 0 ? bgColorLevel0 : bgColor } borderRadius="0">
       <AccordionItem _first={{ borderTopWidth: 0 }} _last={{ borderBottomWidth: 0 }}>
         { ({ isExpanded }) => (
           <>

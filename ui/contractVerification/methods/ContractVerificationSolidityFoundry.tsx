@@ -28,7 +28,7 @@ const ContractVerificationSolidityFoundry = () => {
           <ContractVerificationFormCodeSnippet code={ codeSnippet }/>
         </Flex>
         <Box whiteSpace="pre-wrap">
-          <span>Full tutorial about contract verification via Foundry on Blockscout is available </span>
+          <span>Full tutorial about contract verification via Foundry on VION is available </span>
           <Link href="https://docs.blockscout.com/for-users/verifying-a-smart-contract/foundry-verification" target="_blank">
             here
           </Link>

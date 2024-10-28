@@ -62,42 +62,7 @@ const SearchBarInput = (
     };
   }, [ isMobile, handleScroll ]);
 
-  const handleKeyPress = React.useCallback((event: KeyboardEvent) => {
-    if (isMobile) {
-      return;
-    }
-
-    switch (event.key) {
-      case '/': {
-        if ([ 'INPUT', 'TEXTAREA' ].includes((event.target as HTMLElement).tagName)) {
-          break;
-        }
-
-        if (!isSuggestOpen) {
-          event.preventDefault();
-          innerRef.current?.querySelector('input')?.focus();
-          onFocus?.();
-        }
-        break;
-      }
-      case 'Escape': {
-        if (isSuggestOpen) {
-          innerRef.current?.querySelector('input')?.blur();
-          onHide?.();
-        }
-        break;
-      }
-    }
-  }, [ isMobile, isSuggestOpen, onFocus, onHide ]);
-
-  React.useEffect(() => {
-    window.addEventListener('keydown', handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [ handleKeyPress ]);
-
-  const bgColor = useColorModeValue('white', 'black');
+  const bgColor = useColorModeValue('white', '#000E09');
   const transformMobile = scrollDirection !== 'down' ? 'translateY(0)' : 'translateY(-100%)';
 
   const rightElement = (() => {
@@ -134,7 +99,7 @@ const SearchBarInput = (
       onFocus={ onFocus }
       w="100%"
       backgroundColor={ bgColor }
-      borderRadius={{ base: isHomepage ? 'base' : 'none', lg: 'base' }}
+      borderRadius="0px"
       position={{ base: isHomepage ? 'static' : 'absolute', lg: 'relative' }}
       top={{ base: isHomepage ? 0 : 55, lg: 0 }}
       left="0"
@@ -170,6 +135,7 @@ const SearchBarInput = (
           _focusWithin={{ _placeholder: { color: 'gray.300' } }}
           color={ useColorModeValue('black', 'white') }
           value={ value }
+          backgroundColor={ useColorModeValue('white', '#000E09') }
         />
         <InputRightElement top={{ base: 2, lg: isHomepage ? 3 : 2 }} right={ 2 }>
           { rightElement }

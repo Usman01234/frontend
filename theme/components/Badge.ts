@@ -3,7 +3,7 @@ import { mode } from '@chakra-ui/theme-tools';
 
 const baseStyle = defineStyle({
   fontSize: 'xs',
-  borderRadius: 'sm',
+  borderRadius: '0',
   fontWeight: 'bold',
 });
 

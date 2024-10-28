@@ -38,7 +38,7 @@ const Icon = (props: IconProps) => {
     const styles = getIconProps(props.size);
 
     if (props.isLoading) {
-      return <Skeleton boxSize={ styles.boxSize } borderRadius="sm" mr={ 2 }/>;
+      return <Skeleton boxSize={ styles.boxSize } borderRadius="0" mr={ 2 }/>;
     }
 
     return (
@@ -48,7 +48,7 @@ const Icon = (props: IconProps) => {
             <Image
               src={ props.protocol.icon_url }
               boxSize={ styles.boxSize }
-              borderRadius="sm"
+              borderRadius="0"
               mr={ 2 }
               alt={ `${ props.protocol.title } protocol icon` }
               fallback={ icon }
@@ -63,7 +63,7 @@ const Icon = (props: IconProps) => {
                 <Image
                   src={ props.protocol.icon_url }
                   boxSize={ 5 }
-                  borderRadius="sm"
+                  borderRadius="0"
                   mr={ 2 }
                   alt={ `${ props.protocol.title } protocol icon` }
                   fallback={ icon }

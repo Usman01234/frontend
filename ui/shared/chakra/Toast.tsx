@@ -36,7 +36,7 @@ const Toast = ({ onClose, title, description, id, isClosable, status, icon }: To
     <Alert
       id={ ids?.root }
       alignItems="start"
-      borderRadius="md"
+      borderRadius="0"
       boxShadow="lg"
       paddingY={ 4 }
       paddingLeft={ 6 }
@@ -58,7 +58,7 @@ const Toast = ({ onClose, title, description, id, isClosable, status, icon }: To
       { isClosable && (
         <CloseButton
           size="md"
-          borderRadius="base"
+          borderRadius="0"
           color="gray.700"
           onClick={ onClose }
           position="absolute"

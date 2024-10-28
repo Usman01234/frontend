@@ -9,7 +9,7 @@ type TabSize = 'sm' | 'md';
 
 const SkeletonTabText = ({ size, title }: { size: TabSize; title: RoutedTab['title'] }) => (
   <Skeleton
-    borderRadius="base"
+    borderRadius="0"
     borderWidth={ size === 'sm' ? '2px' : 0 }
     fontWeight={ 600 }
     mx={ size === 'sm' ? 3 : 4 }
@@ -43,7 +43,7 @@ const TabsSkeleton = ({ className, tabs, size = 'md' }: Props) => {
         />
       )) }
       { tabs.slice(tabIndex, tabIndex + 1).map(({ title, id }) => (
-        <Box key={ id } bgColor={ bgColor } py={ size === 'sm' ? 1 : 2 } borderRadius="base" flexShrink={ 0 }>
+        <Box key={ id } bgColor={ bgColor } py={ size === 'sm' ? 1 : 2 } borderRadius="0" flexShrink={ 0 }>
           <SkeletonTabText
             key={ id }
             title={ title }

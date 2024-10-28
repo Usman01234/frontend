@@ -50,7 +50,7 @@ const Item = ({ data, isLoading }: ItemProps) => {
   return (
     <GridItem
       bgColor={ attributeBgColor }
-      borderRadius="md"
+      borderRadius="0"
       px={ 4 }
       py={ 2 }
       display="flex"

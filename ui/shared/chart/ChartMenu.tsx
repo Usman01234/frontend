@@ -124,7 +124,7 @@ const ChartMenu = ({
   return (
     <>
       <Menu>
-        <Skeleton isLoaded={ !isLoading } borderRadius="base">
+        <Skeleton isLoaded={ !isLoading } borderRadius="0">
           <MenuButton
             w="36px"
             h="32px"

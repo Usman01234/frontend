@@ -52,7 +52,7 @@ const AddressNetWorth = ({ addressData, isLoading, addressHash }: Props) => {
     const buttonContent = (
       <>
         { multichainFeature.logoUrl &&
-          <Image src={ multichainFeature.logoUrl } alt={ multichainFeature.name } boxSize={ 5 } mr={ 2 } borderRadius="4px" overflow="hidden"/>
+          <Image src={ multichainFeature.logoUrl } alt={ multichainFeature.name } boxSize={ 5 } mr={ 2 } borderRadius="0" overflow="hidden"/>
         }
         { _capitalize(multichainFeature.name) }</>
     );

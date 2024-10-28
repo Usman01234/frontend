@@ -8,7 +8,7 @@ const sizes = {
     fontSize: 'md',
     lineHeight: '20px',
     h: '160px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
   lg: defineStyle({
     fontSize: 'md',
@@ -16,7 +16,7 @@ const sizes = {
     px: '24px',
     py: '28px',
     h: '160px',
-    borderRadius: 'base',
+    borderRadius: '0',
   }),
 };
 

@@ -13,7 +13,7 @@ const TokenLogoPlaceholder = ({ className }: { className?: string }) => {
       fontWeight={ 600 }
       bgColor={ bgColor }
       color={ color }
-      borderRadius="base"
+      borderRadius="0"
       name="token-placeholder"
       transitionProperty="background-color,color"
       transitionDuration="normal"

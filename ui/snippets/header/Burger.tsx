@@ -63,6 +63,7 @@ const Burger = ({ isMarketplaceAppPage }: Props) => {
               <NetworkMenuContentMobile tabs={ networkMenu.availableTabs } items={ networkMenu.data }/> :
               <NavigationMobile onNavLinkClick={ onClose } isMarketplaceAppPage={ isMarketplaceAppPage }/>
             }
+            dtfyuio
           </DrawerBody>
         </DrawerContent>
       </Drawer>

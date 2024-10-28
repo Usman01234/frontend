@@ -107,7 +107,7 @@ const ContractCode = ({ addressHash, contractQuery, channel }: Props) => {
       h={ 8 }
       mr={ data?.is_partially_verified ? 0 : 3 }
       ml={ data?.is_partially_verified ? 0 : 'auto' }
-      borderRadius="base"
+      borderRadius="0"
       flexShrink={ 0 }
     />
   ) : (
@@ -181,7 +181,7 @@ const ContractCode = ({ addressHash, contractQuery, channel }: Props) => {
             href="https://docs.blockscout.com/about/features/ethereum-bytecode-database-microservice"
             fontSize="md"
           >
-            Blockscout Bytecode Database
+            VION Bytecode Database
           </LinkExternal>
         </Alert>
       );
@@ -233,7 +233,7 @@ const ContractCode = ({ addressHash, contractQuery, channel }: Props) => {
         ) }
         { !data?.is_verified && data?.verified_twin_address_hash && (!data?.proxy_type || data.proxy_type === 'unknown') && (
           <Alert status="warning" whiteSpace="pre-wrap" flexWrap="wrap">
-            <span>Contract is not verified. However, we found a verified contract with the same bytecode in Blockscout DB </span>
+            <span>Contract is not verified. However, we found a verified contract with the same bytecode in VION DB </span>
             <AddressEntity
               address={{ hash: data.verified_twin_address_hash, is_contract: true }}
               truncation="constant"

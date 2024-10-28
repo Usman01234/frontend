@@ -50,7 +50,7 @@ const StatsFilters = ({
         w={{ base: '100%', lg: 'auto' }}
         area="section"
       >
-        { isLoading ? <Skeleton w={{ base: '100%', lg: '103px' }} h="32px" borderRadius="base"/> : (
+        { isLoading ? <Skeleton w={{ base: '100%', lg: '103px' }} h="32px" borderRadius="0"/> : (
           <StatsDropdownMenu
             items={ sectionsList }
             selectedId={ currentSection }

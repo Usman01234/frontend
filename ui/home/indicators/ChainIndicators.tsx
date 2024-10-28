@@ -84,7 +84,7 @@ const ChainIndicators = () => {
     <Flex
       px={{ base: 3, lg: 4 }}
       py={ 3 }
-      borderRadius="base"
+      borderRadius="0"
       bgColor={ bgColor }
       columnGap={{ base: 3, lg: 4 }}
       rowGap={ 0 }
@@ -108,7 +108,7 @@ const ChainIndicators = () => {
           flexShrink={ 0 }
           flexDir="column"
           as="ul"
-          borderRadius="lg"
+          borderRadius="0"
           rowGap="6px"
           m={{ base: 'auto 0', lg: 0 }}
         >

@@ -21,30 +21,30 @@ const TxAdditionalInfoContainer = ({ hash }: Props) => {
   if (isPending) {
     return (
       <Box>
-        <Skeleton w="130px" h="24px" borderRadius="full" mb={ 6 }/>
+        <Skeleton w="130px" h="24px" borderRadius="0" mb={ 6 }/>
         <Box>
-          <Skeleton w="110px" h="16px" borderRadius="full" mb={ 3 }/>
-          <Skeleton w="100%" h="16px" borderRadius="full"/>
+          <Skeleton w="110px" h="16px" borderRadius="0" mb={ 3 }/>
+          <Skeleton w="100%" h="16px" borderRadius="0"/>
         </Box>
         <Divider my={ 4 }/>
         <Box>
-          <Skeleton w="110px" h="16px" borderRadius="full" mb={ 3 }/>
-          <Skeleton w="100%" h="16px" borderRadius="full"/>
+          <Skeleton w="110px" h="16px" borderRadius="0" mb={ 3 }/>
+          <Skeleton w="100%" h="16px" borderRadius="0"/>
         </Box>
         <Divider my={ 4 }/>
         <Box>
-          <Skeleton w="110px" h="16px" borderRadius="full" mb={ 3 }/>
-          <Skeleton w="100%" h="16px" borderRadius="full"/>
+          <Skeleton w="110px" h="16px" borderRadius="0" mb={ 3 }/>
+          <Skeleton w="100%" h="16px" borderRadius="0"/>
         </Box>
         <Divider my={ 4 }/>
         <Box>
-          <Skeleton w="110px" h="16px" borderRadius="full" mb={ 3 }/>
-          <Skeleton w="75%" h="16px" borderRadius="full"/>
-          <Skeleton w="75%" h="16px" borderRadius="full" mt={ 1 }/>
-          <Skeleton w="75%" h="16px" borderRadius="full" mt={ 1 }/>
+          <Skeleton w="110px" h="16px" borderRadius="0" mb={ 3 }/>
+          <Skeleton w="75%" h="16px" borderRadius="0"/>
+          <Skeleton w="75%" h="16px" borderRadius="0" mt={ 1 }/>
+          <Skeleton w="75%" h="16px" borderRadius="0" mt={ 1 }/>
         </Box>
         <Divider my={ 4 }/>
-        <Skeleton w="80px" h="16px" borderRadius="full"/>
+        <Skeleton w="80px" h="16px" borderRadius="0"/>
       </Box>
     );
   }

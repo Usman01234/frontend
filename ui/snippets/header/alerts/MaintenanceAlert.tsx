@@ -9,7 +9,7 @@ const MaintenanceAlert = () => {
   }
 
   return (
-    <Alert status="info" colorScheme="gray" py={ 3 } borderRadius="md">
+    <Alert status="info" colorScheme="gray" py={ 3 } borderRadius="0">
       <AlertIcon display={{ base: 'none', lg: 'flex' }}/>
       <AlertTitle
         dangerouslySetInnerHTML={{ __html: config.UI.maintenanceAlert.message }}

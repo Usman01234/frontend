@@ -41,7 +41,7 @@ const BlockEpochElectionRewardDetailsDesktop = ({ type, token }: Props) => {
     <Box
       p={ 4 }
       bgColor={ bgColor }
-      borderRadius="base"
+      borderRadius="0"
       maxH="360px"
       overflowY="scroll"
       fontWeight={ 400 }

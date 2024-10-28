@@ -21,7 +21,7 @@ interface Props {
 const EntityTag = ({ data, isLoading, maxW, noLink }: Props) => {
 
   if (isLoading) {
-    return <Skeleton borderRadius="sm" w="100px" h="24px"/>;
+    return <Skeleton borderRadius="0" w="100px" h="24px"/>;
   }
 
   const hasLink = !noLink && Boolean(getTagLinkParams(data));

@@ -72,7 +72,7 @@ const LogItem = ({ address, index, topics, data, decoded, type, tx_hash: txHash,
             <Icon as={ searchIcon } boxSize={ 5 }/>
           </Link>
         </Tooltip> */ }
-        <Skeleton isLoaded={ !isLoading } ml="auto" borderRadius="base">
+        <Skeleton isLoaded={ !isLoading } ml="auto" borderRadius="0">
           <Tooltip label="Log index">
             <Button variant="outline" colorScheme="gray" data-selected="true" size="sm" fontWeight={ 400 }>
               { index }
@@ -100,7 +100,7 @@ const LogItem = ({ address, index, topics, data, decoded, type, tx_hash: txHash,
         )) }
       </GridItem>
       <RowHeader isLoading={ isLoading }>Data</RowHeader>
-      <Skeleton isLoaded={ !isLoading } p={ 4 } fontSize="sm" borderRadius="md" bgColor={ isLoading ? undefined : dataBgColor }>
+      <Skeleton isLoaded={ !isLoading } p={ 4 } fontSize="sm" borderRadius="0" bgColor={ isLoading ? undefined : dataBgColor }>
         { data }
       </Skeleton>
     </Grid>

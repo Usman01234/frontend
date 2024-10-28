@@ -80,7 +80,7 @@ export default SocketNewItemsNotice;
 export const Desktop = ({ ...props }: Props) => {
   return (
     <SocketNewItemsNotice
-      borderRadius={ props.isLoading ? 'sm' : 0 }
+      borderRadius={ props.isLoading ? '0' : 0 }
       h={ props.isLoading ? 5 : 'auto' }
       maxW={ props.isLoading ? '215px' : undefined }
       w="100%"

@@ -22,31 +22,38 @@ export interface Params<Resource extends PaginatedResources> {
   scrollRef?: React.RefObject<HTMLDivElement>;
 }
 
-type NextPageParams = Record<string, unknown>;
+type NextPageParams = {
+  block_number?: number;
+  items_count: number;
+  world?: string;
+  table_id?: string;
+  key0?: string;
+  key1?: string;
+  key_bytes?: string;
+  [key: string]: any; // Allow additional dynamic properties
+};
 
-const INITIAL_PAGE_PARAMS = { '1': {} };
-
-function getPaginationParamsFromQuery(queryString: string | Array<string> | undefined) {
+function getPaginationParamsFromQuery(queryString: string | Array<string> | undefined): NextPageParams | {} {
   if (queryString) {
     try {
-      return JSON.parse(decodeURIComponent(getQueryParamString(queryString))) as NextPageParams;
-    } catch (error) {}
+      return JSON.parse(decodeURIComponent(getQueryParamString(queryString))) as NextPageParams; // Ensure return type
+    } catch (error) {
+      console.error('Error parsing query params:', error);
+    }
   }
-
-  return {};
+  return {}; // Return an empty object as a fallback
 }
 
-function getNextPageParams<R extends PaginatedResources>(data: ResourcePayload<R> | undefined) {
-  if (!data || typeof data !== 'object' || !('next_page_params' in data)) {
-    return;
+function getNextPageParams<R extends PaginatedResources>(
+  data: ResourcePayload<R> | undefined,
+): NextPageParams | null {
+  if (!data || typeof data !== 'object' || Array.isArray(data) || !('next_page_params' in data)) {
+    return null;
   }
-
-  return data.next_page_params;
+  return data.next_page_params as NextPageParams || null;
 }
 
-export type QueryWithPagesResult<Resource extends PaginatedResources> =
-UseQueryResult<ResourcePayload<Resource>, ResourceError<unknown>> &
-{
+export type QueryWithPagesResult<Resource extends PaginatedResources> = UseQueryResult<ResourcePayload<Resource>, ResourceError<unknown>> & {
   onFilterChange: <R extends PaginatedResources = Resource>(filters: PaginationFilters<R>) => void;
   onSortingChange: (sorting?: PaginationSorting<Resource>) => void;
   pagination: PaginationParams;
@@ -65,9 +72,15 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
   const router = useRouter();
 
   const [ page, setPage ] = React.useState<number>(router.query.page && !Array.isArray(router.query.page) ? Number(router.query.page) : 1);
+
+  // Ensure that the initialParams variable is of type NextPageParams
+  const initialParams: NextPageParams = getPaginationParamsFromQuery(router.query.next_page_params) as NextPageParams;
+
+  // Ensure the initial state for pageParams contains only NextPageParams
   const [ pageParams, setPageParams ] = React.useState<Record<number, NextPageParams>>({
-    [page]: getPaginationParamsFromQuery(router.query.next_page_params),
+    [page]: initialParams, // This now has a compatible type
   });
+
   const [ hasPages, setHasPages ] = React.useState(page > 1);
 
   const isMounted = React.useRef(false);
@@ -85,20 +98,20 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
       ...options,
     },
   });
+
   const { data } = queryResult;
   const nextPageParams = getNextPageParams(data);
 
   const onNextPageClick = useCallback(() => {
     if (!nextPageParams) {
-      // we hide next page button if no next_page_params
-      return;
+      return; // Hide next page button if no next_page_params
     }
 
     setPageParams((prev) => ({
       ...prev,
-      [page + 1]: nextPageParams as NextPageParams,
+      [page + 1]: nextPageParams,
     }));
-    setPage(prev => prev + 1);
+    setPage((prev) => prev + 1);
 
     const nextPageQuery = {
       ...router.query,
@@ -112,8 +125,6 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
   }, [ nextPageParams, page, router, scrollToTop ]);
 
   const onPrevPageClick = useCallback(() => {
-    // returning to the first page
-    // we dont have pagination params for the first page
     let nextPageQuery: typeof router.query = { ...router.query };
     if (page === 2) {
       nextPageQuery = omit(router.query, [ 'next_page_params', 'page' ]);
@@ -125,8 +136,10 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
     scrollToTop();
     router.push({ pathname: router.pathname, query: nextPageQuery }, undefined, { shallow: true })
       .then(() => {
-        setPage(prev => prev - 1);
-        page === 2 && queryClient.removeQueries({ queryKey: [ resourceName ] });
+        setPage((prev) => prev - 1);
+        if (page === 2) {
+          queryClient.removeQueries({ queryKey: [ resourceName ] });
+        }
       });
   }, [ router, page, pageParams, scrollToTop, queryClient, resourceName ]);
 
@@ -138,10 +151,8 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
     router.push({ pathname: router.pathname, query: nextRouterQuery }, undefined, { shallow: true }).then(() => {
       queryClient.removeQueries({ queryKey: [ resourceName ] });
       setPage(1);
-      setPageParams(INITIAL_PAGE_PARAMS);
+      setPageParams({ '1': {} as NextPageParams }); // Reset to initial state
       window.setTimeout(() => {
-        // FIXME after router is updated we still have inactive queries for previously visited page (e.g third), where we came from
-        // so have to remove it but with some delay :)
         queryClient.removeQueries({ queryKey: [ resourceName ], type: 'inactive' });
       }, 100);
     });
@@ -168,7 +179,7 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
     ).then(() => {
       setHasPages(false);
       setPage(1);
-      setPageParams(INITIAL_PAGE_PARAMS);
+      setPageParams({ '1': {} as NextPageParams }); // Reset to initial state
     });
   }, [ router, resource, scrollToTop ]);
 
@@ -188,7 +199,7 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
     ).then(() => {
       setHasPages(false);
       setPage(1);
-      setPageParams(INITIAL_PAGE_PARAMS);
+      setPageParams({ '1': {} as NextPageParams }); // Reset to initial state
     });
   }, [ router, scrollToTop ]);
 
@@ -211,15 +222,20 @@ export default function useQueryWithPages<Resource extends PaginatedResources>({
       queryClient.cancelQueries({ queryKey: [ resourceName ] });
       setPage(1);
     }
-  // hook should run only when queryName has changed
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ resourceName ]);
+  }, [ resourceName, page, queryClient ]);
 
   React.useEffect(() => {
-    window.setTimeout(() => {
-      isMounted.current = true;
-    }, 0);
+    if (isMounted.current) {
+      setPageParams((prev) => ({
+        ...prev,
+        [page]: nextPageParams || {} as NextPageParams,
+      }));
+    }
+  }, [ nextPageParams, page ]);
+
+  React.useEffect(() => {
+    isMounted.current = true;
   }, []);
 
-  return { ...queryResult, pagination, onFilterChange, onSortingChange };
+  return { ...queryResult, onFilterChange, onSortingChange, pagination };
 }

@@ -32,7 +32,7 @@ const ContractMethodResultPublicClient = ({ data, abiItem, onSettle, mode: modeP
   return (
     <>
       { isError && (
-        <Alert status="error" mt={ 3 } p={ 4 } borderRadius="md" fontSize="sm" wordBreak="break-word" whiteSpace="pre-wrap">
+        <Alert status="error" mt={ 3 } p={ 4 } borderRadius="0" fontSize="sm" wordBreak="break-word" whiteSpace="pre-wrap">
           { 'shortMessage' in data && typeof data.shortMessage === 'string' ? data.shortMessage : data.message }
         </Alert>
       ) }

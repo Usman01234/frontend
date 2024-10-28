@@ -62,7 +62,7 @@ const StatsWidget = ({
         alignItems="center"
         bgColor={ isLoading ? skeletonBgColor : bgColor }
         p={ 3 }
-        borderRadius="base"
+        borderRadius="0"
         justifyContent="space-between"
         columnGap={ 2 }
         { ...(href && !isLoading ? {
@@ -76,7 +76,7 @@ const StatsWidget = ({
             p={ 2 }
             boxSize="40px"
             isLoading={ isLoading }
-            borderRadius="base"
+            borderRadius="0"
             display={{ base: 'none', lg: 'block' }}
             flexShrink={ 0 }
           />
@@ -118,7 +118,7 @@ const StatsWidget = ({
           </Skeleton>
         </Box>
         { typeof hint === 'string' ? (
-          <Skeleton isLoaded={ !isLoading } alignSelf="center" borderRadius="base">
+          <Skeleton isLoaded={ !isLoading } alignSelf="center" borderRadius="0">
             <Hint label={ hint } boxSize={ 6 } color={ hintColor }/>
           </Skeleton>
         ) : hint }

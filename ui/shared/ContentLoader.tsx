@@ -28,7 +28,7 @@ const ContentLoader = ({ className, text }: Props) => {
           left: '100%',
           top: 0,
           backgroundColor: 'blue.300',
-          borderRadius: 'full',
+          borderRadius: '0',
         }}
       />
       <Text mt={ 6 } variant="secondary">

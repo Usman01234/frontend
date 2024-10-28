@@ -44,7 +44,7 @@ const TableColumnFilterWrapper = ({ columnName, isActive, className, children, i
           icon={ <IconSvg name="filter" w="19px" h="19px"/> }
           isActive={ isActive }
           isDisabled={ isLoading }
-          borderRadius="4px"
+          borderRadius="0"
           color="text_secondary"
         />
       </PopoverTrigger>

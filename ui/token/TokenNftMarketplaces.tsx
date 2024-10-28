@@ -45,7 +45,7 @@ const TokenNftMarketplaces = ({ hash, id, isLoading, appActionData, source }: Pr
                     src={ item.logo_url }
                     alt={ `${ item.name } marketplace logo` }
                     boxSize={ 5 }
-                    borderRadius="full"
+                    borderRadius="0"
                   />
                 </Link>
               </Tooltip>

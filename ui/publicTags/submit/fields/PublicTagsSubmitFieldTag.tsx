@@ -41,7 +41,7 @@ const PublicTagsSubmitFieldTag = ({ index, isDisabled, register, errors, onAddCl
 
   return (
     <>
-      <GridItem colSpan={{ base: 1, lg: 2 }} p="10px" borderRadius="base" bgColor={ errors ? bgColorError : bgColorDefault }>
+      <GridItem colSpan={{ base: 1, lg: 2 }} p="10px" borderRadius="0" bgColor={ errors ? bgColorError : bgColorDefault }>
         <Grid
           rowGap={ 3 }
           columnGap={ 3 }

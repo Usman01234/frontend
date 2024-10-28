@@ -50,7 +50,7 @@ const NavLink = ({ className, item, noIcon }: Props) => {
         fontSize="sm"
         lineHeight={ 5 }
         fontWeight={ 500 }
-        borderRadius="base"
+        borderRadius="0"
       >
         { !noIcon && <NavLinkIcon item={ item } mr={ 3 }/> }
         <chakra.span>{ item.text }</chakra.span>

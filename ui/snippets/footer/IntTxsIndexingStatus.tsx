@@ -64,7 +64,7 @@ const IntTxsIndexingStatus = () => {
       px={ 2 }
       py={ 1 }
       bg={ bgColor }
-      borderRadius="base"
+      borderRadius="0"
       alignItems="center"
       justifyContent="center"
       color="green.400"

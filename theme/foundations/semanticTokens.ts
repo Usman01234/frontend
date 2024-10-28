@@ -9,15 +9,15 @@ const semanticTokens = {
       _dark: 'whiteAlpha.800',
     },
     text_secondary: {
-      'default': 'gray.500',
-      _dark: 'gray.400',
+      'default': '#808080',
+      _dark: '#808080',
     },
     link: {
-      'default': 'blue.600',
-      _dark: 'blue.300',
+      'default': '#2DD98F',
+      _dark: '#2DD98F',
     },
     link_hovered: {
-      'default': 'blue.400',
+      'default': '#2DD98F',
     },
     icon_link_external: {
       'default': 'gray.300',

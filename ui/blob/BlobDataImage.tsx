@@ -14,7 +14,7 @@ const BlobDataImage = ({ src }: Props) => {
       p={ 4 }
       minH="200px"
       w="100%"
-      borderRadius="md"
+      borderRadius="0"
     >
       <Image
         src={ src }

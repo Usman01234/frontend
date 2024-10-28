@@ -20,7 +20,7 @@ const SearchBarSuggestApp = ({ data, isMobile, searchTerm, onClick }: Props) => 
 
   const logo = (
     <Image
-      borderRadius="base"
+      borderRadius="0"
       boxSize={ 5 }
       src={ useColorModeValue(data.logo, data.logoDarkMode || data.logo) }
       alt={ `${ data.title } app icon` }

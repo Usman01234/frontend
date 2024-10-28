@@ -28,10 +28,10 @@ type Props = {
 const ChartIntervalSelect = ({ interval, onIntervalChange, isLoading, selectTagSize }: Props) => {
   return (
     <>
-      <Skeleton display={{ base: 'none', lg: 'flex' }} borderRadius="base" isLoaded={ !isLoading }>
+      <Skeleton display={{ base: 'none', lg: 'flex' }} borderRadius="0" isLoaded={ !isLoading }>
         <TagGroupSelect<StatsIntervalIds> items={ intervalListShort } onChange={ onIntervalChange } value={ interval } tagSize={ selectTagSize }/>
       </Skeleton>
-      <Skeleton display={{ base: 'block', lg: 'none' }} borderRadius="base" isLoaded={ !isLoading }>
+      <Skeleton display={{ base: 'block', lg: 'none' }} borderRadius="0" isLoaded={ !isLoading }>
         <StatsDropdownMenu
           items={ intervalList }
           selectedId={ interval }

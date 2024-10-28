@@ -94,7 +94,7 @@ const NameDomainsActionBar = ({
                         <Image
                           src={ protocol.icon_url }
                           boxSize={ 5 }
-                          borderRadius="sm"
+                          borderRadius="0"
                           mr={ 2 }
                           alt={ `${ protocol.title } protocol icon` }
                           fallback={ <IconSvg name="ENS_slim" boxSize={ 5 } mr={ 2 }/> }

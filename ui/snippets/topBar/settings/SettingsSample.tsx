@@ -24,12 +24,12 @@ const SettingsSample = ({ label, value, bg, onClick, isActive }: Props) => {
   const hoverBorderColor = useToken('colors', 'link_hovered');
 
   return (
-    <Box p="9px" bgColor={ isActive ? activeBgColor : 'transparent' } borderRadius="base">
+    <Box p="9px" bgColor={ isActive ? activeBgColor : 'transparent' } borderRadius="0">
       <Tooltip label={ label } offset={ TOOLTIP_OFFSET }>
         <Box
           bg={ bg }
           boxSize="22px"
-          borderRadius="full"
+          borderRadius="0"
           borderWidth="1px"
           borderColor={ isActive ? activeBgColor : bgColor }
           position="relative"
@@ -43,7 +43,7 @@ const SettingsSample = ({ label, value, bg, onClick, isActive }: Props) => {
             width: 'calc(100% + 2px)',
             height: 'calc(100% + 2px)',
             borderStyle: 'solid',
-            borderRadius: 'full',
+            borderRadius: '0',
             borderWidth: '2px',
             borderColor: isActive ? activeBorderColor : 'transparent',
           }}

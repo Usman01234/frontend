@@ -54,7 +54,7 @@ const AddressMudRecord = ({ tableId, recordId, isQueryEnabled = true, scrollRef 
         />
       ) }
       <Show above="lg" ssr={ false }>
-        <Table borderRadius="8px" style={{ tableLayout: 'auto' }} width="100%" overflow="hidden">
+        <Table borderRadius="0" style={{ tableLayout: 'auto' }} width="100%" overflow="hidden">
           { data?.schema.key_names.length && data?.schema.key_names.map((keyName, index) => (
             <Tr key={ keyName } borderBottomStyle={ index === data.schema.key_names.length - 1 ? 'hidden' : 'solid' }>
               <Td fontWeight={ 600 } whiteSpace="nowrap" fontSize="sm">
@@ -83,7 +83,7 @@ const AddressMudRecord = ({ tableId, recordId, isQueryEnabled = true, scrollRef 
               { index === 0 && <Box color="text_secondary">{ dayjs(data.record.timestamp).format('lll') }</Box> }
             </VStack>
           )) }
-          <Table borderRadius="8px" style={{ tableLayout: 'auto' }} width="100%" mt={ 2 } overflow="hidden">
+          <Table borderRadius="0" style={{ tableLayout: 'auto' }} width="100%" mt={ 2 } overflow="hidden">
             <AddressMudRecordValues data={ data }/>
           </Table>
         </>

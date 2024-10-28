@@ -34,7 +34,7 @@ const AddressTagListItem = ({ item, onEditClick, onDeleteClick, isLoading }: Pro
         />
         <HStack spacing={ 3 } mt={ 4 }>
           <Text fontSize="sm" fontWeight={ 500 }>Private tag</Text>
-          <Skeleton isLoaded={ !isLoading } display="inline-block" borderRadius="sm">
+          <Skeleton isLoaded={ !isLoading } display="inline-block" borderRadius="0">
             <Tag>
               { item.name }
             </Tag>

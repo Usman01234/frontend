@@ -51,7 +51,7 @@ const ContractExternalLibraries = ({ className, data, isLoading }: Props) => {
   const isMobile = useIsMobile();
 
   if (isLoading) {
-    return <Skeleton h={ 8 } w="150px" borderRadius="base"/>;
+    return <Skeleton h={ 8 } w="150px" borderRadius="0"/>;
   }
 
   if (data.length === 0) {

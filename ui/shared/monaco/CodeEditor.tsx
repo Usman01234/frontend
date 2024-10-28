@@ -56,7 +56,7 @@ const CodeEditor = ({ data, remappings, libraries, language, mainFile, contractN
   const [ containerRect, containerNodeRef ] = useClientRect<HTMLDivElement>();
 
   const { colorMode } = useColorMode();
-  const borderRadius = useToken('radii', 'md');
+  const borderRadius = useToken('0', '0');
   const isMobile = useIsMobile();
   const themeColors = useThemeColors();
 
@@ -231,7 +231,7 @@ const CodeEditor = ({ data, remappings, libraries, language, mainFile, contractN
   }), [ editorWidth, themeColors, borderRadius ]);
 
   const renderErrorScreen = React.useCallback(() => {
-    return <Center bgColor={ themeColors['editor.background'] } w="100%" borderRadius="md">Oops! Something went wrong!</Center>;
+    return <Center bgColor={ themeColors['editor.background'] } w="100%" borderRadius="0">Oops! Something went wrong!</Center>;
   }, [ themeColors ]);
 
   if (data.length === 1) {
@@ -255,7 +255,7 @@ const CodeEditor = ({ data, remappings, libraries, language, mainFile, contractN
             defaultValue={ data[index].source_code }
             options={ EDITOR_OPTIONS }
             onMount={ handleEditorDidMount }
-            loading={ <CodeEditorLoading borderRadius="md"/> }
+            loading={ <CodeEditorLoading borderRadius="0"/> }
           />
         </ErrorBoundary>
       </Box>
@@ -271,7 +271,7 @@ const CodeEditor = ({ data, remappings, libraries, language, mainFile, contractN
       ref={ containerNodeRef }
       sx={ containerSx }
       overflow={{ base: 'hidden', lg: 'visible' }}
-      borderRadius="md"
+      borderRadius="0"
       onClick={ handleClick }
       onKeyDown={ handleKeyDown }
       onKeyUp={ handleKeyUp }

@@ -35,7 +35,7 @@ const BlockEpochElectionRewardsTableItem = ({ isLoading, data, type }: Props) =>
       >
         <Td borderColor={ mainRowBorderColor }>
           { Boolean(data.count) && (
-            <Skeleton isLoaded={ !isLoading } display="flex" borderRadius="sm">
+            <Skeleton isLoaded={ !isLoading } display="flex" borderRadius="0">
               <IconButton
                 aria-label={ section.isOpen ? 'Collapse section' : 'Expand section' }
                 variant="link"

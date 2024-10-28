@@ -63,7 +63,7 @@ const AddressQrCode = ({ address, className, isLoading }: Props) => {
   }, [ address.hash, isOpen, onClose, pageType ]);
 
   if (isLoading) {
-    return <Skeleton className={ className } w="36px" h="32px" borderRadius="base"/>;
+    return <Skeleton className={ className } w="36px" h="32px" borderRadius="0"/>;
   }
 
   return (

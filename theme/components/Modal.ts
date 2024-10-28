@@ -13,7 +13,7 @@ const { defineMultiStyleConfig, definePartsStyle } =
 const baseStyleDialog = defineStyle(() => {
   return {
     padding: 8,
-    borderRadius: 'lg',
+    borderRadius: '0',
     bg: 'dialog_bg',
     margin: 'auto',
   };

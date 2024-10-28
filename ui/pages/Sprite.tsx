@@ -44,7 +44,7 @@ const Item = ({ name, fileSize, bgColor }: IconInfo & { bgColor: string }) => {
       onClick={ onCopy }
       cursor="pointer"
     >
-      <IconSvg name={ name as IconName } boxSize="100px" bgColor={ bgColor } borderRadius="base"/>
+      <IconSvg name={ name as IconName } boxSize="100px" bgColor={ bgColor } borderRadius="0"/>
       <Tooltip label={ copied ? 'Copied' : 'Copy to clipboard' } isOpen={ copied }>
         <Box fontWeight={ 500 } mt={ 2 }>{ name }</Box>
       </Tooltip>

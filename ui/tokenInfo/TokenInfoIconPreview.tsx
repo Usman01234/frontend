@@ -22,10 +22,10 @@ const TokenInfoIconPreview = ({ url, onError, onLoad, isInvalid }: Props) => {
       flexShrink={ 0 }
       borderWidth="2px"
       borderColor={ url ? borderColorActive : borderColor }
-      borderRadius="base"
+      borderRadius="0"
     >
       <Image
-        borderRadius="base"
+        borderRadius="0"
         src={ url }
         alt="Token logo preview"
         boxSize={{ base: 10, lg: 12 }}

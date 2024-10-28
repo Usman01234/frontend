@@ -191,7 +191,7 @@ const SearchResultTableItem = ({ data, searchTerm, isLoading }: Props) => {
             <Td fontSize="sm">
               <Flex alignItems="center">
                 <Image
-                  borderRadius="base"
+                  borderRadius="0"
                   boxSize={ 6 }
                   mr={ 2 }
                   src={ colorMode === 'dark' && data.app.logoDarkMode ? data.app.logoDarkMode : data.app.logo }

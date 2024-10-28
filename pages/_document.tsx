@@ -31,6 +31,7 @@ class MyDocument extends Document {
   }
 
   render() {
+
     return (
       <Html lang="en">
         <Head>
@@ -55,12 +56,15 @@ class MyDocument extends Document {
           <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg"/>
 
           <link rel="preload" as="image" href={ svgSprite.href }/>
+
         </Head>
+
         <body>
           <ColorModeScript initialColorMode={ theme.config.initialColorMode }/>
           <Main/>
           <NextScript/>
         </body>
+
       </Html>
     );
   }

@@ -22,18 +22,18 @@ const NativeTokenIcon = ({ isLoading, className, type }: Props) => {
   });
 
   if (isLoading || statsQueryResult.isPlaceholderData) {
-    return <Skeleton borderRadius="base" className={ className }/>;
+    return <Skeleton borderRadius="0" className={ className }/>;
   }
 
   const src = type === 'secondary' ? statsQueryResult.data?.secondary_coin_image : statsQueryResult.data?.coin_image;
 
   return (
     <Image
-      borderRadius="base"
+      borderRadius="0"
       className={ className }
       src={ src || '' }
       alt={ `${ config.chain.currency.symbol } logo` }
-      fallback={ <TokenLogoPlaceholder borderRadius="base" className={ className }/> }
+      fallback={ <TokenLogoPlaceholder borderRadius="0" className={ className }/> }
       fallbackStrategy={ src ? 'onError' : 'beforeLoadOrError' }
     />
   );

@@ -15,7 +15,7 @@ const styles = (props: StyleFunctionProps) => {
           left: '-5px',
           width: `100%`,
           height: '100%',
-          borderRadius: 'base',
+          borderRadius: '0',
           borderColor: mode('blue.200', 'blue.600')(props),
           borderWidth: '1px',
           borderStyle: 'dashed',

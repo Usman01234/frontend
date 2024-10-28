@@ -39,7 +39,7 @@ const FilterInput = ({ onChange, className, size = 'sm', placeholder, initialVal
       isLoaded={ !isLoading }
       className={ className }
       minW="250px"
-      borderRadius="base"
+      borderRadius="0"
     >
       <InputGroup
         size={ size }

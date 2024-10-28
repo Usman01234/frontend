@@ -25,7 +25,7 @@ const AddressAccountHistoryListItem = (props: Props) => {
 
   return (
     <ListItemMobile rowGap={ 4 } w="full">
-      <Skeleton borderRadius="sm" isLoaded={ !props.isPlaceholderData } w="full">
+      <Skeleton borderRadius="0" isLoaded={ !props.isPlaceholderData } w="full">
         <Flex justifyContent="space-between" w="full">
           <Flex columnGap={ 2 }>
             <IconSvg
@@ -43,12 +43,12 @@ const AddressAccountHistoryListItem = (props: Props) => {
           <TimeAgoWithTooltip
             timestamp={ props.tx.rawTransactionData.timestamp * 1000 }
             color="text_secondary"
-            borderRadius="sm"
+            borderRadius="0"
             fontWeight={ 500 }
           />
         </Flex>
       </Skeleton>
-      <Skeleton borderRadius="sm" isLoaded={ !props.isPlaceholderData }>
+      <Skeleton borderRadius="0" isLoaded={ !props.isPlaceholderData }>
         <LinkInternal
           href={ `/tx/${ props.tx.rawTransactionData.transactionHash }` }
           fontWeight="bold"

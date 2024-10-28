@@ -11,7 +11,7 @@ import Button from './Button/Button';
 const variantSoftRounded = definePartsStyle((props) => {
   return {
     tab: {
-      borderRadius: 'base',
+      borderRadius: '0',
       fontWeight: '600',
       color: mode('blue.700', 'gray.400')(props),
       _selected: {

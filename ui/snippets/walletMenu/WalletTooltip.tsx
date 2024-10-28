@@ -28,7 +28,7 @@ const WalletTooltip = ({ children, isDisabled, isMobile, isWalletConnected, isAu
       }
       return null;
     }
-    return <span>Connect your wallet<br/>to Blockscout for<br/>full-featured access</span>;
+    return <span>Connect your wallet<br/>to VION for<br/>full-featured access</span>;
   }, [ isWalletConnected, isAutoConnectDisabled ]);
 
   const isAppPage = router.pathname === '/apps/[id]';

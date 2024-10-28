@@ -24,7 +24,7 @@ const TxRevertReason = (props: Props) => {
         bgColor={ bgColor }
         p={ 4 }
         fontSize="sm"
-        borderRadius="md"
+        borderRadius="0"
         templateColumns="auto minmax(0, 1fr)"
         rowGap={ 2 }
         columnGap={ 4 }

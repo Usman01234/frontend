@@ -63,7 +63,7 @@ const DragAndDropArea = ({ onDrop, children, className, isDisabled, fullFilePath
       _hover={{
         borderColor: isDisabled ? disabledBorderColor : 'link_hovered',
       }}
-      borderRadius="base"
+      borderRadius="0"
       borderStyle="dashed"
       cursor="pointer"
       textAlign="center"

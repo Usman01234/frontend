@@ -33,7 +33,7 @@ const UserAvatar = ({ size, fallbackIconSize = 20 }: Props) => {
       src={ data?.avatar }
       alt={ `Profile picture of ${ data?.name || data?.nickname || '' }` }
       boxSize={ `${ size }px` }
-      borderRadius="full"
+      borderRadius="0"
       overflow="hidden"
       fallback={ isImageLoadError || !data?.avatar ? <IconSvg name="profile" boxSize={ `${ fallbackIconSize }px` }/> : undefined }
       onError={ handleImageLoadError }

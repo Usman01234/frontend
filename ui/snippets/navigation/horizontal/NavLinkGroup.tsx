@@ -46,7 +46,7 @@ const NavLinkGroup = ({ item }: Props) => {
               color={ isOpen ? colors.text.hover : color }
               _hover={{ color: colors.text.hover }}
               bgColor={ bgColor }
-              borderRadius="base"
+              borderRadius="0"
               { ...getDefaultTransitionProps() }
             >
               { item.text }
